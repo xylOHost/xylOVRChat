@@ -119,7 +119,7 @@ namespace xylOVRChat.SDK
                         {
                             foreach (var line in currentFileContent.Replace(previousFileContent, "").Split('\n'))
                             {
-                                //Console.WriteLine(line);
+                                //  TODO: Add support for warnings, kick notifications and video player urls
                                 if (line.Contains("OnPlayerJoined"))
                                 {
                                     string displayName = Regex.Match(line, @"OnPlayerJoined (.+)").Groups[1].Value;
