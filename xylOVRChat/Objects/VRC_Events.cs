@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace xylOVRChat.Objects
 {
-    public class VRCEvents
+    public class VRC_Events
     {
         public class OnPlayerJoined
         {
             public DateTime dateTime { get; set; } = DateTime.Now;
             public string displayName { get; set; } = string.Empty;
         }
+
         public class OnPlayerLeft
         {
             public DateTime dateTime { get; set; } = DateTime.Now;
             public string displayName { get; set; } = string.Empty;
         }
+
         public class OnAvatarModeration
         {
             public DateTime dateTime { get; set; } = DateTime.Now;
@@ -25,11 +27,12 @@ namespace xylOVRChat.Objects
             public ModerationType moderationType { get; set; } = ModerationType.Safety;
             public enum ModerationType
             {
-                Shown,
-                Hidden,
-                Safety
+                Shown = 0,
+                Hidden = 1,
+                Safety = 2
             }
         }
+
         public class OnVoiceModeration
         {
             public DateTime dateTime { get; set; } = DateTime.Now;
@@ -37,9 +40,8 @@ namespace xylOVRChat.Objects
             public ModerationType moderationType { get; set; } = ModerationType.Unmuted;
             public enum ModerationType
             {
-                Unmuted,
-                Muted
-                
+                Unmuted = 0,
+                Muted = 1
             }
         }
     }

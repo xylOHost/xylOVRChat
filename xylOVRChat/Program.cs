@@ -1,4 +1,5 @@
 ﻿using VRChat.API.Model;
+using xylOVRChat.Modules;
 using xylOVRChat.SDK;
 
 namespace xylOVRChat
